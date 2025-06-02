@@ -1,0 +1,31 @@
+@use '@/assets/utils/styles-forwarded' as *;
+
+.adaptive-modal {
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+
+    @media (max-width: 720px) {
+        display: block;
+    }
+
+    .adaptive-img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        pointer-events: none;
+    }
+
+    h2 {
+        @include responsive-font(20, 40);
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.main-wrapper {
+    display: block;
+    @media (max-width: 720px) {
+        display: none;
+    }
+}
